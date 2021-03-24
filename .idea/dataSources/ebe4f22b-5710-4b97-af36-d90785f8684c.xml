@@ -1147,7 +1147,9 @@ SELECT|sys.sys_config
       <System>1</System>
     </view>
     <table id="363" parent="3" name="cars"/>
-    <table id="364" parent="3" name="users"/>
+    <table id="364" parent="3" name="users">
+      <Engine>MyISAM</Engine>
+    </table>
     <column id="365" parent="284" name="USER">
       <Position>1</Position>
       <DataType>varchar(97)|0s</DataType>
@@ -4512,39 +4514,22 @@ SELECT|sys.sys_config
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="1101" parent="364" name="name">
+    <column id="1101" parent="364" name="email">
       <Position>2</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="1102" parent="364" name="last_name">
+    <column id="1102" parent="364" name="name">
       <Position>3</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="1103" parent="364" name="email">
+    <column id="1103" parent="364" name="last_name">
       <Position>4</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="1104" parent="364" name="cars_id">
-      <Position>5</Position>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="1105" parent="364" name="fk_users_cars_idx">
-      <ColNames>cars_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="1106" parent="364" name="PRIMARY">
+    <key id="1104" parent="364" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="1107" parent="364" name="fk_users_cars">
-      <ColNames>cars_id</ColNames>
-      <RefTableName>cars</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
   </database-model>
 </dataSource>
